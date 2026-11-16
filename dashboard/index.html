@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The next token launches, ranked by what the market already pays.</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-in">
+    <p class="kicker">LAUNCH RADAR &middot; PEER-PRICED &middot; MODEL <span id="mver">-</span></p>
+    <h1>The next token launches, ranked by what the market already pays.</h1>
+    <p class="standfirst">Every protocol here is live, holds real value, and has no token yet. Each one is priced the way the market already prices its live peers in the same category &mdash; then adjusted for one week of growth, for surviving tokenless, and for how many chains it runs on. No names were picked by hand.</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="summary" id="summary" aria-label="Snapshot summary"></section>
+
+  <section class="controls" aria-label="Find a protocol">
+    <label class="ctl grow">Search
+      <input id="q" type="search" placeholder="Name, slug or chain&hellip;" autocomplete="off">
+    </label>
+    <label class="ctl">Category
+      <select id="fcat"><option value="">All categories</option></select>
+    </label>
+    <label class="ctl">Chain
+      <select id="fchain"><option value="">All chains</option></select>
+    </label>
+    <label class="ctl">Token status
+      <select id="ftoken">
+        <option value="pre">Pre-token board</option>
+        <option value="live">Already has a token</option>
+      </select>
+    </label>
+    <label class="ctl">Sort by
+      <select id="fsort">
+        <option value="rank">Rank</option>
+        <option value="tvl">TVL, high to low</option>
+        <option value="implied">Implied value, high to low</option>
+        <option value="growth">7d growth, high to low</option>
+      </select>
+    </label>
+  </section>
+
+  <p class="count" id="count" role="status"></p>
+  <section id="board" aria-label="Ranked board"></section>
+  <section id="detail" aria-label="Protocol detail"></section>
+
+  <section class="model" aria-label="How the pricing works">
+    <h2>How a price is earned</h2>
+    <div id="model-body"></div>
+  </section>
+
+  <footer class="foot" id="foot"></footer>
+</main>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
